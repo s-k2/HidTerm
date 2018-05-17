@@ -1,0 +1,12 @@
+bin/HidTerm.exe
+bin/src/HidPort.o
+bin/src/HidPort.P
+bin/src/HidTerm.o
+bin/src/HidTerm.P
+bin/src/Port.o
+bin/src/Port.P
+bin/src/Win32
+bin/src/Win32/Hid.o
+bin/src/Win32/Hid.P
+bin/src/Win32/Serial.o
+bin/src/Win32/Serial.P

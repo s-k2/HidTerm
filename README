@@ -1,0 +1,7 @@
+HidTerm
+-------
+
+A simple terminal tool to communicate with the TinyTick/TinyBas-board using 
+its HID-protocol.
+
+To build HidTerm, just call "make" within this directory!
