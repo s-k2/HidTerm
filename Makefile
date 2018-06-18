@@ -13,8 +13,11 @@ LFLAGS   = -static -static-libgcc -static-libstdc++ -O3 $(LIBS)
 COMPILER = g++
 
 # TODO: will always link on Windows as filename is bin/hidterm.exe
-bin/hidterm: $(OBJS)
-	$(COMPILER) $(OBJS) $(LFLAGS) -o bin/hidterm
+bin/hidterm: $(OBJS) bin/src/Win32/HidTermRes.o
+	$(COMPILER) $(OBJS) bin/src/Win32/HidTermRes.o $(LFLAGS) -o bin/hidterm
+
+bin/src/Win32/HidTermRes.o: src/Win32/HidTerm.rc
+	windres src/Win32/HidTerm.rc bin/src/Win32/HidTermRes.o
 
 #generate dependency information and compile
 bin/%.o : %.cpp
